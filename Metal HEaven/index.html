@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metal Heaven</title>
+     
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .card {
+            height: 400px; 
+            width: 300px;  
+            margin: auto;  
+            transition: transform 0.3s; 
+        }
+
+        .card-body {
+            color: black; 
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .modal-body {
+            color: black;  
+        }
+
+        .modal-title {
+            color: black; 
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-center">Metal Heaven 🎸🤘</h1>
+         
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#store">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cart">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login/Signup</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+     
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="close" data-dismiss="offcanvas" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+    <section id="hero" class="text-center">
+        <h2>Welcome to Metal Heaven</h2>
+        <p>Your one-stop shop for all the heavy metal albums and instruments!</p>
+        <button id="shop-now" class="btn btn-primary" data-toggle="modal" data-target="#selectionModal">Shop Now</button>
+    </section>
+
+     
+    <div class="modal fade" id="selectionModal" tabindex="-1" role="dialog" aria-labelledby="selectionModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="selectionModalLabel">Choose Your Shop</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Would you like to shop for:</p>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='instruments.html'">Instruments</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='vinyl.html'">Vinyl Discs</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     
+    <section id="categories" class="container mt-5">
+        <h3 class="text-center">Our Categories</h3>
+        <div class="row">
+            
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="venyl.jpg" class="card-img-top" alt="Vinyl Discs" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h4 class="card-title">Vinyl Discs</h4>
+                        <p class="card-text">Exclusive collection of metal vinyl discs!</p>
+                        <a href="vinyl.html" class="btn btn-secondary">Shop Vinyls</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="instruments.jpeg" class="card-img-top" alt="Instruments" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h4 class="card-title">Instruments</h4>
+                        <p class="card-text">Guitars, drums, and more for the ultimate metal experience!</p>
+                        <a href="instruments.html" class="btn btn-secondary">Shop Instruments</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 Metal Heaven. All Rights Reserved.  </p>
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
